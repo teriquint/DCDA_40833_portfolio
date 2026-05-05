@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3419694e2988cbd0f747067e9e20afa6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3419694e2988cbd0f747067e9e20afa6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3419694e2988cbd0f747067e9e20afa6 = L.map(
+                "map_3419694e2988cbd0f747067e9e20afa6",
+                {
+                    center: [47.75, -122.17],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8315aa14b7873aa77dd39c8d1b67cc95 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/teriquint/cmm0v6y2m008e01s27o31772w/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoidGVyaXF1aW50IiwiYSI6ImNtbHRycXdodDAzcGMzZ3Ewbmd0eWhhNTYifQ.OtLgrZN4opZ_FGt-EpqDbQ",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Mapbox",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8315aa14b7873aa77dd39c8d1b67cc95.addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var marker_c589a5ddca81044cc46baba3ca4aabd9 = L.marker(
+                [48.014166, -122.065564],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_ccd0ea776288b1cd549b7570d6d5d6ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69da4dc5a8480cfb08c75a2c779117a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a6874975853d339ef391f774e89bd840 = $(`<div id="html_a6874975853d339ef391f774e89bd840" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>North Cove Park</h3>             <p><strong>Type:</strong> Park</p>             <p>North Cove Park is a waterfront park in downtown Lake Stevens. I would include this because it shows the lake and gives visitors a good first feel for the area.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="North Cove Park" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_69da4dc5a8480cfb08c75a2c779117a9.setContent(html_a6874975853d339ef391f774e89bd840);
+            
+        
+
+        marker_c589a5ddca81044cc46baba3ca4aabd9.bindPopup(popup_69da4dc5a8480cfb08c75a2c779117a9)
+        ;
+
+        
+    
+    
+            marker_c589a5ddca81044cc46baba3ca4aabd9.bindTooltip(
+                `<div>
+                     North Cove Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c589a5ddca81044cc46baba3ca4aabd9.setIcon(icon_ccd0ea776288b1cd549b7570d6d5d6ab);
+            
+    
+            var marker_36ccc671870c69740e9b1412991087cd = L.marker(
+                [48.01435, -122.064534],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_670383b05187ded1fa84e22072a6e91f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41cdfe87ea22dcc819b3e1ffe6d64c28 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ee5362896ac5d4a2e0c2f90f56c1882 = $(`<div id="html_6ee5362896ac5d4a2e0c2f90f56c1882" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>The Mill on Lake Stevens</h3>             <p><strong>Type:</strong> Community</p>             <p>The Mill is a community gathering spot near the lake. I would include it because it feels connected to local events and the small-town side of Lake Stevens.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="The Mill on Lake Stevens" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_41cdfe87ea22dcc819b3e1ffe6d64c28.setContent(html_6ee5362896ac5d4a2e0c2f90f56c1882);
+            
+        
+
+        marker_36ccc671870c69740e9b1412991087cd.bindPopup(popup_41cdfe87ea22dcc819b3e1ffe6d64c28)
+        ;
+
+        
+    
+    
+            marker_36ccc671870c69740e9b1412991087cd.bindTooltip(
+                `<div>
+                     The Mill on Lake Stevens
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_36ccc671870c69740e9b1412991087cd.setIcon(icon_670383b05187ded1fa84e22072a6e91f);
+            
+    
+            var marker_8689cb7f52e809da0016f1781c612d59 = L.marker(
+                [48.017612, -122.095379],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_fdb6e738ecff790f261bac8117e4d124 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_001e50d12c82d088c75bfd5059de0d01 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_00079726932da98e2c84d4aeb1e25c37 = $(`<div id="html_00079726932da98e2c84d4aeb1e25c37" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>Lundeen Park</h3>             <p><strong>Type:</strong> Park</p>             <p>Lundeen Park is a place I would show someone who wanted to see the lake in a more relaxed way. It represents the outdoor and family-friendly feeling of Lake Stevens.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Lundeen Park" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_001e50d12c82d088c75bfd5059de0d01.setContent(html_00079726932da98e2c84d4aeb1e25c37);
+            
+        
+
+        marker_8689cb7f52e809da0016f1781c612d59.bindPopup(popup_001e50d12c82d088c75bfd5059de0d01)
+        ;
+
+        
+    
+    
+            marker_8689cb7f52e809da0016f1781c612d59.bindTooltip(
+                `<div>
+                     Lundeen Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8689cb7f52e809da0016f1781c612d59.setIcon(icon_fdb6e738ecff790f261bac8117e4d124);
+            
+    
+            var marker_d24f9eadabc0318d26427a2afad45243 = L.marker(
+                [48.017788, -122.063005],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_4fadeef43cd0f592cb0958f837c749e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04aee8c99475149d69142b969fe96050 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02ec27317241cb045750d6718164b8c1 = $(`<div id="html_02ec27317241cb045750d6718164b8c1" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>Lake Stevens Library</h3>             <p><strong>Type:</strong> Cultural</p>             <p>The Lake Stevens Library is a useful community place and adds an educational stop to the map. I like including libraries because they show more than just tourist spots.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Lake Stevens Library" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_04aee8c99475149d69142b969fe96050.setContent(html_02ec27317241cb045750d6718164b8c1);
+            
+        
+
+        marker_d24f9eadabc0318d26427a2afad45243.bindPopup(popup_04aee8c99475149d69142b969fe96050)
+        ;
+
+        
+    
+    
+            marker_d24f9eadabc0318d26427a2afad45243.bindTooltip(
+                `<div>
+                     Lake Stevens Library
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d24f9eadabc0318d26427a2afad45243.setIcon(icon_4fadeef43cd0f592cb0958f837c749e5);
+            
+    
+            var marker_01bf008aac8602275d250d296ea1f7cf = L.marker(
+                [48.016277, -122.052493],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_3eb7bae0823c0acc24de68217629bde2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69669f70f9d25bcc9713a2d4c646913e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2d2fc40508c3cfb07158a2a6b2582c2 = $(`<div id="html_c2d2fc40508c3cfb07158a2a6b2582c2" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>Centennial Trail 20th Street Trailhead</h3>             <p><strong>Type:</strong> Recreation</p>             <p>The Centennial Trail gives the map an outdoor recreation location. It is the kind of place I would include for someone who wanted to walk, bike, or see more of the area.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Centennial Trail 20th Street Trailhead" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_69669f70f9d25bcc9713a2d4c646913e.setContent(html_c2d2fc40508c3cfb07158a2a6b2582c2);
+            
+        
+
+        marker_01bf008aac8602275d250d296ea1f7cf.bindPopup(popup_69669f70f9d25bcc9713a2d4c646913e)
+        ;
+
+        
+    
+    
+            marker_01bf008aac8602275d250d296ea1f7cf.bindTooltip(
+                `<div>
+                     Centennial Trail 20th Street Trailhead
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01bf008aac8602275d250d296ea1f7cf.setIcon(icon_3eb7bae0823c0acc24de68217629bde2);
+            
+    
+            var marker_f0fb8f2a6827db4b203f4d2f18e94d36 = L.marker(
+                [48.031025, -122.058623],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_59945e62d7df30e65b73c98210c97173 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_faba015c5d2530806433f0e7236f68ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c9f4b8c199112236e8de01940eddf4ac = $(`<div id="html_c9f4b8c199112236e8de01940eddf4ac" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>Centennial Trail WA 92 Trailhead</h3>             <p><strong>Type:</strong> Recreation</p>             <p>This trailhead gives another public access point to the Centennial Trail. I included it because trails are part of how people experience the Lake Stevens area.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Centennial Trail WA 92 Trailhead" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_faba015c5d2530806433f0e7236f68ac.setContent(html_c9f4b8c199112236e8de01940eddf4ac);
+            
+        
+
+        marker_f0fb8f2a6827db4b203f4d2f18e94d36.bindPopup(popup_faba015c5d2530806433f0e7236f68ac)
+        ;
+
+        
+    
+    
+            marker_f0fb8f2a6827db4b203f4d2f18e94d36.bindTooltip(
+                `<div>
+                     Centennial Trail WA 92 Trailhead
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f0fb8f2a6827db4b203f4d2f18e94d36.setIcon(icon_59945e62d7df30e65b73c98210c97173);
+            
+    
+            var marker_1514e973256df7b322964c1f336916b0 = L.marker(
+                [47.620433, -122.34931],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_dd0ed60e82107c184d30a2a656d9a62f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03300727d9eee2f55b2e0f83c7ae73e1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e8538ee878e31186472b23561d27b99 = $(`<div id="html_9e8538ee878e31186472b23561d27b99" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>Space Needle</h3>             <p><strong>Type:</strong> Landmark</p>             <p>The Space Needle is one of the most recognizable places in Seattle. I would include it for a visitor because it immediately gives the map a clear Seattle landmark.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Space Needle" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_03300727d9eee2f55b2e0f83c7ae73e1.setContent(html_9e8538ee878e31186472b23561d27b99);
+            
+        
+
+        marker_1514e973256df7b322964c1f336916b0.bindPopup(popup_03300727d9eee2f55b2e0f83c7ae73e1)
+        ;
+
+        
+    
+    
+            marker_1514e973256df7b322964c1f336916b0.bindTooltip(
+                `<div>
+                     Space Needle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1514e973256df7b322964c1f336916b0.setIcon(icon_dd0ed60e82107c184d30a2a656d9a62f);
+            
+    
+            var marker_3a8feb2a32def9140c1494a9cd309121 = L.marker(
+                [47.608847, -122.340515],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_12cab0ccb4d4c3080a11e2334d61848a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa01b0bf4049dfe4f8f19ea181da49cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_865a986e67ff101277d53eb947f75090 = $(`<div id="html_865a986e67ff101277d53eb947f75090" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>Pike Place Market</h3>             <p><strong>Type:</strong> Cultural</p>             <p>Pike Place Market is one of the places I think visitors expect to see in Seattle. It adds food, history, and local character to the map.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Pike Place Market" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_fa01b0bf4049dfe4f8f19ea181da49cd.setContent(html_865a986e67ff101277d53eb947f75090);
+            
+        
+
+        marker_3a8feb2a32def9140c1494a9cd309121.bindPopup(popup_fa01b0bf4049dfe4f8f19ea181da49cd)
+        ;
+
+        
+    
+    
+            marker_3a8feb2a32def9140c1494a9cd309121.bindTooltip(
+                `<div>
+                     Pike Place Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3a8feb2a32def9140c1494a9cd309121.setIcon(icon_12cab0ccb4d4c3080a11e2334d61848a);
+            
+    
+            var marker_d9f83c27dc3d6591ebf2c344207f9efd = L.marker(
+                [47.666193, -122.350795],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_b95d15f491d88b5c00b50306bd61b747 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7b7c018ac7dde3531e88c9b0f09e722 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_91e01e360f042ee518f6ee4b3d2a6c71 = $(`<div id="html_91e01e360f042ee518f6ee4b3d2a6c71" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>Woodland Park Zoo</h3>             <p><strong>Type:</strong> Recreation</p>             <p>Woodland Park Zoo adds a family-friendly and outdoor location to the map. I included it because it gives visitors something fun to do beyond the downtown area.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="Woodland Park Zoo" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_a7b7c018ac7dde3531e88c9b0f09e722.setContent(html_91e01e360f042ee518f6ee4b3d2a6c71);
+            
+        
+
+        marker_d9f83c27dc3d6591ebf2c344207f9efd.bindPopup(popup_a7b7c018ac7dde3531e88c9b0f09e722)
+        ;
+
+        
+    
+    
+            marker_d9f83c27dc3d6591ebf2c344207f9efd.bindTooltip(
+                `<div>
+                     Woodland Park Zoo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d9f83c27dc3d6591ebf2c344207f9efd.setIcon(icon_b95d15f491d88b5c00b50306bd61b747);
+            
+    
+            var marker_4a7a623db42d9a4345569e67036a19d0 = L.marker(
+                [47.59068, -122.333605],
+                {
+}
+            ).addTo(map_3419694e2988cbd0f747067e9e20afa6);
+        
+    
+            var icon_721e14ab6375b4c70ef9e90ca2f6a1b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c4cd2a84a92a77d42c8b99597119fc6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e51442088f24c32cd098dec91088b030 = $(`<div id="html_e51442088f24c32cd098dec91088b030" style="width: 100.0%; height: 100.0%;">         <div style="width:250px;">             <h3>T-Mobile Park</h3>             <p><strong>Type:</strong> Sports</p>             <p>T-Mobile Park adds a sports location to the map. I included it because sports are something I enjoy, and a Mariners game would be a fun Seattle stop for a visitor.</p>             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="T-Mobile Park" style="width:100%; border-radius:8px;">         </div>         </div>`)[0];
+                popup_2c4cd2a84a92a77d42c8b99597119fc6.setContent(html_e51442088f24c32cd098dec91088b030);
+            
+        
+
+        marker_4a7a623db42d9a4345569e67036a19d0.bindPopup(popup_2c4cd2a84a92a77d42c8b99597119fc6)
+        ;
+
+        
+    
+    
+            marker_4a7a623db42d9a4345569e67036a19d0.bindTooltip(
+                `<div>
+                     T-Mobile Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a7a623db42d9a4345569e67036a19d0.setIcon(icon_721e14ab6375b4c70ef9e90ca2f6a1b2);
+            
+</script>
+</html>
