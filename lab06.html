@@ -1,0 +1,132 @@
+<!-- Lab 6 Assignment: Custom Basemap and Interactive Hometown Map -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lab 6 custom basemap and hometown map for DCDA 40833">
+    <meta name="author" content="Teri Quintana">
+    <title>Teri Quintana | Lab 6 Hometown Map</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation: I kept this consistent with the rest of my portfolio pages -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab01.html">Lab 1</a></li>
+            <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+            <li><a href="lab03.html">Lab 3: Visualization Critique</a></li>
+            <li><a href="lab04.html">Lab 4: Tableau Visualization</a></li>
+            <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
+            <li><a href="lab06.html">Lab 6: Hometown Map</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header: I updated this page title for the hometown mapping lab -->
+    <header>
+        <h1>Lab 6: Interactive Hometown Map</h1>
+        <h2>Fort Worth, Texas</h2>
+        <p>DCDA 40833 Skills Portfolio | Spring 2026</p>
+    </header>
+
+    <main>
+
+        <!-- Overview Section: This introduces the purpose of the lab -->
+        <section id="overview">
+            <h2>Lab Overview</h2>
+
+            <p>For Lab 6, I created an interactive hometown map focused on Fort Worth, Texas. The goal was to combine a custom Mapbox basemap, a CSV file of meaningful locations, and a Python-generated Folium map.</p>
+
+            <p>I chose Fort Worth because it is the city I know best, and it has a mix of places that show its personality. I wanted the map to feel useful for someone visiting for the first time, but also personal enough to show why these places matter to me.</p>
+        </section>
+
+        <!-- Inspiration Section: This explains the design idea behind the basemap -->
+        <section id="design-inspiration">
+            <h2>Design Inspiration</h2>
+
+            <p>My basemap design was inspired by a Fort Worth visitor guide style. I wanted the map to feel welcoming, local, and slightly playful while still being useful. I used Fort Worth’s Western identity, TCU purple, light blue water tones, and soft illustrated colors as my main design direction.</p>
+
+            <p>The inspiration image below shows the kind of mood I wanted: friendly, purple-focused, easy to read, and connected to Fort Worth landmarks. I wanted the basemap to support the locations without feeling too busy or distracting.</p>
+
+            <!-- I included my inspiration image so visitors can see the design style I was working from -->
+            <figure class="viz-container">
+                <img src="images/fwmap.png" alt="Fort Worth visitor guide style inspiration image">
+                <figcaption>Design inspiration: Fort Worth visitor guide style with TCU purple and soft map colors.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Map Section: This embeds the Python-generated Folium map -->
+        <section id="interactive-map">
+            <h2>Interactive Map</h2>
+
+            <p>Below is my interactive hometown map. The markers show meaningful Fort Worth locations, and each pop-up includes the location name, category, description, and image.</p>
+
+            <!-- This iframe displays the Folium map created with Python -->
+            <div class="viz-container">
+                <iframe src="hometown_map.html" width="100%" height="600" style="border: 2px solid #7dd3fc; border-radius: 12px;"></iframe>
+                <figcaption>Interactive Folium map created with Python and a custom Mapbox basemap.</figcaption>
+            </div>
+
+            <p>
+                <a href="hometown_map.html" target="_blank" rel="noopener noreferrer">
+                    Open the interactive map in a new tab
+                </a>
+            </p>
+        </section>
+
+        <!-- Dataset Section: This explains the CSV file -->
+        <section id="dataset">
+            <h2>Hometown Locations Dataset</h2>
+
+            <p>For my CSV file, I selected public places in Fort Worth that would be meaningful or useful for someone visiting the city. I included a mix of restaurants, cultural locations, outdoor spaces, educational places, and local landmarks.</p>
+
+            <p>The dataset includes the location name, address, type, a personal description, and an image URL. I did not include any private addresses or personal locations because this map is meant to be public-facing.</p>
+
+            <h3>Types of Locations Included</h3>
+            <ul>
+                <li>Restaurants and local food spots</li>
+                <li>Cultural and museum locations</li>
+                <li>Outdoor and recreation spaces</li>
+                <li>Historic Fort Worth landmarks</li>
+                <li>TCU and Neeley School of Business</li>
+            </ul>
+        </section>
+
+        <!-- Reflection Section: This addresses the required Lab 6 reflection prompts -->
+        <section id="reflection">
+            <h2>Reflection</h2>
+
+            <h3>Design Inspiration</h3>
+
+            <p>My design inspiration came from Fort Worth itself. I wanted the basemap to feel connected to the city’s personality instead of looking like a default map. Fort Worth has this mix of Western history, downtown energy, museums, restaurants, TCU, and family-friendly places, so I wanted the design to feel warm and welcoming. I used purple because of TCU and because it already matched the style of my portfolio. I also used light blue for water and softer colors so the basemap would not overpower the markers.</p>
+
+            <h3>Cartographic Challenges</h3>
+
+            <p>The hardest design challenge was thinking about scale. A map can look good when zoomed in, but then become too crowded or too empty when zoomed out. I had to think about what details should show at different zoom levels. Roads and place labels are helpful, but too many labels can make the map feel cluttered. I wanted the basemap to have enough detail to help people understand Fort Worth, but not so much detail that the custom markers became hard to see.</p>
+
+            <p>I also had to think about the balance between style and function. I wanted the map to look creative, but it still needed to work like a real map. If the colors were too strong or the labels were too busy, the design would become distracting. That reminded me that cartographic design is not just about making something pretty. It has to help the viewer understand the place.</p>
+
+            <h3>Technical Challenges</h3>
+
+            <p>The technical part was challenging because several pieces had to work together. I needed the CSV file, the Mapbox style, the access token, the Python code, the geocoding, and the Folium output to all connect correctly. The easiest part to understand was the CSV because it was basically a structured list of locations. The harder part was connecting that list to coordinates and then getting the custom basemap to load correctly.</p>
+
+            <p>I used AI help to understand parts of the Python code and to troubleshoot when something did not work. The biggest thing I learned is that small details matter. A file name, folder path, token, or style URL can break the map if it is typed wrong. I understand the basic logic: Python reads the CSV, geocodes the addresses, adds markers by category, creates pop-ups, and saves the final map as an HTML file. I still would need help writing all of the code from scratch, but I understand what the main sections are doing.</p>
+
+            <h3>Conclusion</h3>
+
+            <p>This lab helped me see how mapping combines design, data, and technical work. I liked that the final product was not just a chart or a written reflection. It was an interactive map that someone could actually click through. My biggest takeaway is that a good map needs both personality and clarity. The custom design makes it feel more personal, but the locations, pop-ups, and labels have to stay easy to understand.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer: I kept this consistent with the rest of my portfolio -->
+    <footer>
+        <p><a href="https://github.com/teriquint/DCDA_40833_portfolio">GitHub Repository</a></p>
+        <p>&copy; 2026 Teri Quintana | DCDA 40833 | TCU</p>
+    </footer>
+
+</body>
+</html>
