@@ -15,10 +15,10 @@ access_token = "pk.eyJ1IjoidGVyaXF1aW50IiwiYSI6ImNtbHRycXdodDAzcGMzZ3Ewbmd0eWhhN
 
 # My Mapbox username and custom style ID
 mapbox_username = "teriquint"
-mapbox_style_id = "cmosz3qx2002d01sb51negcfo"
+mapbox_style_id = "cmlvuoat3004m01rigs6wex62"
 
 # I understand this part: Folium needs an https tile URL, not the mapbox:// style URL.
-tiles = f"https://api.mapbox.com/styles/v1/{mapbox_username}/{mapbox_style_id}/tiles/256/{{z}}/{{x}}/{{y}}@2x?access_token={access_token}"
+tiles = f"https://api.mapbox.com/styles/v1/{mapbox_teriquint}/{cmlvuoat3004m01rigs6wex62}/tiles/256/{{z}}/{{x}}/{{y}}@2x?access_token={access_token}"
 
 # I understand this part: Python reads my CSV file of hometown locations.
 locations = pd.read_csv("hometown_locations.csv")
